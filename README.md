@@ -4,6 +4,6 @@ Get started creating your own games here: [Community games quickstart](https://a
 
 Read about all the features of arcade2000 here: [Why connect to arcade2000?](https://arcade2000.io/a2/why_connect/)
 
-![angel](https://ultimatewalrus.com/UltimateWalrus/arcade2000/angel_192.gif) ![devil](https://ultimatewalrus.com/UltimateWalrus/arcade2000/devil_192.gif)
+![angel](https://ultimatewalrus.com/arcade2000/angel_192.gif) ![devil](https://ultimatewalrus.com/arcade2000/devil_192.gif)
 
 Have fun!!
