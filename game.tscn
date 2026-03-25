@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dg4ifuolypju1"]
+
+[ext_resource type="Script" uid="uid://loki6tvovigo" path="res://a2_community.gd" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://5np74lwh28ar" path="res://game_example.gd" id="1_feb5d"]
+
+[node name="GameExample" type="Node2D" unique_id=364056441]
+script = ExtResource("1_feb5d")
+
+[node name="A2Community" type="Node" parent="." unique_id=1673709809]
+script = ExtResource("1_e2o6t")
+
+[node name="GameScreen" type="VBoxContainer" parent="." unique_id=1132062878]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="GameScreen" unique_id=1077877558]
+layout_mode = 2
+text = "SCORE: 0"
+
+[node name="Label" type="Label" parent="GameScreen" unique_id=1830853045]
+layout_mode = 2
+text = "Hold the button to increase score!"
+
+[node name="IncreaseScoreButton" type="Button" parent="GameScreen" unique_id=449255861]
+layout_mode = 2
+text = "INCREASE SCORE"
+
+[node name="Ach1Label" type="Label" parent="GameScreen" unique_id=1894829796]
+visible = false
+layout_mode = 2
+text = "Got ach1 at frame:"
+
+[node name="GetAch1Button" type="Button" parent="GameScreen" unique_id=1683593153]
+layout_mode = 2
+text = "Get achievement1"
+
+[node name="Ach2Label" type="Label" parent="GameScreen" unique_id=1701223939]
+visible = false
+layout_mode = 2
+text = "Got ach2 at frame:"
+
+[node name="GetAch2Button" type="Button" parent="GameScreen" unique_id=348924753]
+layout_mode = 2
+text = "Get achievement 2"
+
+[node name="GameOverButton" type="Button" parent="GameScreen" unique_id=660865381]
+layout_mode = 2
+text = "GAME OVER"
+
+[node name="GameOverScreen" type="VBoxContainer" parent="." unique_id=1833807875]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GotScoreLabel" type="Label" parent="GameOverScreen" unique_id=2003941745]
+layout_mode = 2
+text = "You got score: 0"
+
+[node name="TypeYourNameLabel" type="Label" parent="GameOverScreen" unique_id=152020157]
+layout_mode = 2
+text = "Type your name for the scoreboard!"
+
+[node name="LEUsername" type="LineEdit" parent="GameOverScreen" unique_id=1149217178]
+layout_mode = 2
+
+[node name="ErrorLabel" type="Label" parent="GameOverScreen" unique_id=658485057]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Error"
+
+[node name="SubmitButton" type="Button" parent="GameOverScreen" unique_id=1475164947]
+layout_mode = 2
+text = "SUBMIT"
+
+[node name="MainMenu" type="VBoxContainer" parent="." unique_id=513420917]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RestartButton" type="Button" parent="MainMenu" unique_id=1133456440]
+layout_mode = 2
+text = "RESTART"
+
+[node name="ScoreboardButton" type="Button" parent="MainMenu" unique_id=379008833]
+layout_mode = 2
+text = "OPEN SCOREBOARD"
+
+[connection signal="button_down" from="GameScreen/IncreaseScoreButton" to="." method="_on_increase_score_button_button_down"]
+[connection signal="button_up" from="GameScreen/IncreaseScoreButton" to="." method="_on_increase_score_button_button_up"]
+[connection signal="pressed" from="GameScreen/GetAch1Button" to="." method="_on_get_ach_1_button_pressed"]
+[connection signal="pressed" from="GameScreen/GetAch2Button" to="." method="_on_get_ach_2_button_pressed"]
+[connection signal="pressed" from="GameScreen/GameOverButton" to="." method="_on_game_over_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="MainMenu/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="MainMenu/ScoreboardButton" to="." method="_on_scoreboard_button_pressed"]

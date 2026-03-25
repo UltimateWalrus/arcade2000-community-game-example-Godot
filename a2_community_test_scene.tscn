@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://ddgclivmm308p"]
+
+[ext_resource type="Script" uid="uid://loki6tvovigo" path="res://a2_community.gd" id="1_xshuk"]
+[ext_resource type="Script" uid="uid://d013gflehf8ag" path="res://a2_community_example_ui.gd" id="2_6sthe"]
+
+[node name="A2CommunityTestScene" type="Node2D" unique_id=364056441]
+
+[node name="A2Community" type="Node" parent="." unique_id=1673709809]
+script = ExtResource("1_xshuk")
+
+[node name="A2CommunityExampleUI" type="Node" parent="." unique_id=1272551428]
+script = ExtResource("2_6sthe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="A2CommunityExampleUI" unique_id=882442861]
+offset_right = 508.0
+offset_bottom = 609.0
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1827123128]
+layout_mode = 2
+text = "You can use this scene to manually test score submissions."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1531578216]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer" unique_id=488283910]
+layout_mode = 2
+text = "game:"
+
+[node name="LEGame" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer" unique_id=6602079]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "community_test_game"
+placeholder_text = "(your game's nickname)"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1176017192]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer2" unique_id=1791256687]
+layout_mode = 2
+text = "version:"
+
+[node name="LEVersion" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer2" unique_id=275488414]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "v1"
+placeholder_text = "(game version identifier)"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=176153445]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer3" unique_id=1185865816]
+layout_mode = 2
+text = "level:"
+
+[node name="LELevel" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer3" unique_id=1418493324]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+placeholder_text = "(optional)"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1899524124]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer4" unique_id=1044853775]
+layout_mode = 2
+text = "score:"
+
+[node name="LEScore" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer4" unique_id=1886191990]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "12345"
+placeholder_text = "(required, must be integer)"
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1567047058]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer10" unique_id=1912416228]
+layout_mode = 2
+text = "local_score_id:"
+
+[node name="LEScore" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer10" unique_id=525555674]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+placeholder_text = "(optional, for your convenience)"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=655563204]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer5" unique_id=472025823]
+layout_mode = 2
+text = "frame_length:"
+
+[node name="LEFrameLength" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer5" unique_id=2058771879]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "12345"
+placeholder_text = "(required, seconds*60 by default)"
+
+[node name="device_id Note" type="Label" parent="A2CommunityExampleUI/VBoxContainer" unique_id=705919332]
+layout_mode = 2
+text = "NOTE: device_id is sourced from OS.get_unique_id()
+and does not need to be supplied here."
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1795163284]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer6" unique_id=223660549]
+layout_mode = 2
+text = "username:"
+
+[node name="LEUsername" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer6" unique_id=1213057723]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "myuser"
+placeholder_text = "(required, no special characters!)"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=730870523]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer7" unique_id=1538863121]
+layout_mode = 2
+text = "subscores:"
+
+[node name="LESubscores" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer7" unique_id=1603484442]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "sub1:123,sub2:456"
+placeholder_text = "(optional, must setup in browser)"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1651658457]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer8" unique_id=1850530495]
+layout_mode = 2
+text = "achievements:"
+
+[node name="LEAchievements" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer8" unique_id=667170963]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "ach1:123,ach2:234"
+placeholder_text = "(optional, must setup in browser)"
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="A2CommunityExampleUI/VBoxContainer" unique_id=934442534]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer9" unique_id=690680174]
+layout_mode = 2
+text = "GAME SECRET KEY:"
+
+[node name="LEGameSecretKey" type="LineEdit" parent="A2CommunityExampleUI/VBoxContainer/HBoxContainer9" unique_id=752816621]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "60FrtHQBhVLcL5Yg"
+placeholder_text = "(required, must setup in browser)"
+
+[node name="SubmitScoreButton" type="Button" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1348727458]
+layout_mode = 2
+text = "SUBMIT SCORE"
+
+[node name="OpenChartButton" type="Button" parent="A2CommunityExampleUI/VBoxContainer" unique_id=574856110]
+layout_mode = 2
+text = "OPEN HIGH SCORE CHART"
+
+[node name="StatusLabel" type="Label" parent="A2CommunityExampleUI/VBoxContainer" unique_id=1098523891]
+layout_mode = 2
+
+[connection signal="pressed" from="A2CommunityExampleUI/VBoxContainer/SubmitScoreButton" to="A2CommunityExampleUI" method="_on_submit_score_button_pressed"]
+[connection signal="pressed" from="A2CommunityExampleUI/VBoxContainer/OpenChartButton" to="A2CommunityExampleUI" method="_on_open_chart_button_pressed"]
